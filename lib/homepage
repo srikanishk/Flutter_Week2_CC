@@ -1,0 +1,141 @@
+      body: Container(
+        child: Column(
+          children: <Widget>[                                                        
+          new Positioned(
+          top: 0.0,
+          left: 0.0,
+          right: 0.0,
+          child: AppBar(
+            title: Image.network(
+                'https://upload.wikimedia.org/wikipedia/commons/thumb/2/2a/Instagram_logo.svg/1024px-Instagram_logo.svg.png',
+                width: 100,
+                height: 40.0,
+                fit: BoxFit.fill,
+              ),
+            backgroundColor: Colors.grey[200],
+            centerTitle: true,
+            automaticallyImplyLeading: false,
+            leading: IconButton(
+              icon: Icon(Icons.camera_alt_outlined),
+              iconSize: 30,
+              color: Colors.black,
+              onPressed: () {},
+            ),
+            actions: [
+              IconButton(
+                icon: Image.network(
+                  "https://img.icons8.com/ios/452/igtv.png",
+                  width: 30.0,
+                  height: 30.0,
+                ),
+                color: Color(0xffFAFAFA),
+                onPressed: () {
+                  Navigator.push(
+                        context,
+                        MaterialPageRoute(builder: (context) => SearchScreen()),
+                      );
+                },
+              ),
+              IconButton(
+                icon: Image.network(
+                  "https://static.thenounproject.com/png/3861743-200.png",
+                  width: 30.0,
+                  height: 30.0,
+                ),
+              color: Color(0xffFAFAFA),
+                onPressed: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => DMScreen()),
+                    );
+                  },
+                ),
+              ],
+            ),
+          ),
+            Positioned(
+              top: 785.0,
+              height: 50.0,
+              width: 75.0,
+              left: 0,
+              child: IconButton(
+                onPressed: () {},
+                icon: Icon(Icons.home_filled, size: 30.0)
+              ),
+            ),
+            Positioned(
+              top: 785.0,
+              height: 50.0,
+              width: 75.0,
+              left: 75,
+              child: IconButton(
+                onPressed: () {
+                  Navigator.push(
+                        context,
+                        MaterialPageRoute(builder: (context) => SearchScreen()),
+                      );
+                },
+                icon: Icon(Icons.search_rounded, size: 30.0)
+              ),
+            ),
+            Positioned(
+              top: 785.0,
+              height: 50.0,
+              width: 75.0,
+              left: 150,
+              child: IconButton(
+                onPressed: () {
+                  // Navigator.push(
+                  //       context,
+                  //       MaterialPageRoute(builder: (context) => ProfileScreen()),
+                  //     );
+                },
+                icon: Icon(Icons.add_box_outlined,size: 30.0)
+              ),
+            ),
+            Positioned(
+              top: 785.0,
+              height: 50.0,
+              width: 75.0,
+              left: 225,
+              child: IconButton(
+                onPressed: () {
+                  // Navigator.push(
+                  //       context,
+                  //       MaterialPageRoute(builder: (context) => ProfileScreen()),
+                  //     );
+                },
+                icon: Icon(Icons.favorite_border,size: 30.0)
+              ),
+            ),
+            Positioned(
+              top: 795.0,
+              height: 25.0,
+              width: 60.0,
+              left: 300,
+              child:Material(
+                elevation: 3.0,
+                shape: CircleBorder(),
+                clipBehavior: Clip.hardEdge,
+                color: Colors.transparent,
+                child: Ink.image(
+                image: NetworkImage('https://s3-alpha-sig.figma.com/img/7b51/7fd1/166e1c96bb4d606ab3bc83385540dadb?Expires=1627257600&Signature=FQraxbMRt6VrZBLzd-llmrHrxuj6-xY47HNjPOz6piWzMGwP5lnpau9wGTm2-CBwojERNnNrUUJuOxzZ1j49CcQ1sJJDqxClANZo~XslIOfUewgPKtYVfj~6CsBb8V2W~8RfaAwT1wxuUlsxcxqwA87HHEgy2Hc2Txspk9JefZqecI-I-v~TvpiIjUzGngOBdBxB7st6ThqYHlJwyy5ffUaTXk1J5yOSari0HTZr94dJ6RaQ1fCOmW6oWITWNF8oD4se1APhuaP9ZfsNM4NUxGmvbZg-NKm4EkY6UV6EIydjCiEzvF9hhPa7-3NZUo~gQYdehvXcL8s5yjHRKB~gXQ__&Key-Pair-Id=APKAINTVSUGEWH5XD5UA'),
+                fit: BoxFit.cover,
+                width: 10.0,
+                height: 10.0,
+                child: InkWell(
+                  onTap: () {
+                    Navigator.push(
+                        context,
+                        MaterialPageRoute(builder: (context) => ProfileScreen()),
+                      );
+                  },
+                  ),
+                ),
+              )
+            ),
+
+            )
+          ],
+        ),
+      ),
